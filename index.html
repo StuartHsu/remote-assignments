@@ -2,23 +2,30 @@
 
 <html>
 <head>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Assignment 2</title>
   <link rel="stylesheet" href="css/normalize.css">
 	<link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/flexbox.css">
 </head>
 
 <body>
   <header class="main-header">
-    <div class="container clearfix">
-      <h1 class="webtitle"><a href="#">Website Title / Logo</a></h1>
-      <ul class="main-nav">
-        <li><a href="#">Item 1</a></li>
-        <li><a href="#">Item 2</a></li>
-        <li><a href="#">Item 3</a></li>
-        <li><a href="#">Item 4</a></li>
-      </ul>
+    <h1 class="webtitle"><a href="#">Website Title / Logo</a></h1>
+    <div class="togglearea">
+      <label for="toggle">
+        <span></span>
+        <span></span>
+        <span></span>
+      </label>
     </div>
+    <input type="checkbox" id="toggle">
+    <ul class="main-nav">
+      <li><a href="#">Item 1</a></li>
+      <li><a href="#">Item 2</a></li>
+      <li><a href="#">Item 3</a></li>
+      <li><a href="#">Item 4</a></li>
+    </ul>
   </header>
 
   <div class="banner">
