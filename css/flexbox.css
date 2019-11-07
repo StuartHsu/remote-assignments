@@ -2,7 +2,7 @@
 ---------- Media Queries ----------
 ============================== */
 
-@media (min-width: 1200px) {
+@media (min-width: 801px) {
 
   .main-header,
   .main-nav {
@@ -15,6 +15,53 @@
     justify-content: space-between;
   }
 
+  .row {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-around;
+  }
 
+}
+
+@media (max-width: 800px) {
+
+  .main-header,
+  .togglearea {
+    display: flex;
+    flex-direction: row;
+  }
+
+  .main-header {
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .main-nav {
+    display: none;
+    width: 100%;
+  }
+
+  #toggle:checked + .main-nav {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .main-nav a:hover {
+    background: black;
+    color: white;
+  }
+
+  .togglearea {
+    display: flex;
+  }
+
+  .row {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-around;
+  }
 
 }

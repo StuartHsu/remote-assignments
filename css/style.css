@@ -34,7 +34,7 @@ a {
 .main-header {
   background: gainsboro;
   padding-top: .5em;
-  padding-bottom: .5em
+  padding-bottom: .5em;
 }
 
 .webtitle {
@@ -45,7 +45,6 @@ a {
 .webtitle a,
 .main-nav a {
   text-align: center;
-  display: block;
   padding: 10px 15px;
 }
 
@@ -93,12 +92,40 @@ a {
   padding-right: .5em;
 }
 
+.container {
+  text-align: center;
+  margin: 0 auto 100px;
+}
+
+.sectiontitle {
+  margin-bottom: 30px;
+}
+
+.box {
+  padding: 1em;
+  background: slategray;
+  margin: 0 .5em 1.5em;
+}
+
 .banner {
+  line-height: 6em;
+  height: 15em;
   color: #000;
   background: powderblue;
   padding: 3.2em 0; /* 做出 Banner 高度 */
-  margin-bottom: 60px; /* 隔開與下面的距離 */
+  margin-bottom: 30px; /* 隔開與下面的距離 */
   text-align: center;
+}
+
+/* ---- Page Elements ---- */
+
+.button {
+  display: inline-block;
+	color: #000;
+	text-align: center;
+	padding: .625em 1.25em;
+	background: skyblue;
+  margin-top: 30px;
 }
 
 /* ==============================
@@ -107,32 +134,78 @@ a {
 
 /* 500px~800px */
 
+@media (min-width: 801px) {
+
+  .container {
+    max-width: 1200px;    
+  }
+
+  .row {
+    width: 90%;
+    margin: 0 auto;
+  }
+
+  .box {
+    width: 45%;
+    height: 10em;
+  }
+
+}
+
 @media (max-width: 800px) {
 
-  .main-header,
-  .togglearea {
-    display: flex;
-    flex-direction: row;
+  .main-nav a {
+    display: block;
+  }
+
+  .row {
+    width: 90%;
+    margin: 0 auto;
+  }
+
+  .box {
+    width: 45%;
+    height: 10em;
+  }
+
+}
+
+@media (max-width: 500px) {
+
+  .webtitle {
+    font-size: .8em;
+  }
+
+  h1 {
+    font-size: 1.5em;
+  }
+
+  h2 {
+    font-size: 1.3em;
+  }
+
+  p {
+    font-size: .9em;
   }
 
   .main-header {
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: space-between;
+    padding-top: 0;
+    padding-bottom: 0;
   }
 
-  .main-nav {
-    display: none;
-    width: 500px;
+  .togglearea label {
+    width: 1.5em;
+    height: 1.5em;
   }
 
-  #toggle:checked + .main-nav {
-    display: flex;
-    flex-direction: column;
+  .togglearea label span {
+    height: 1px;
+    width: 80%;
+    margin: 2px 0;
   }
 
-  .togglearea {
-    display: flex;
+  .box {
+    width: 100%;
   }
 
 }
@@ -140,9 +213,7 @@ a {
 
 
 
-
-
-/* 
+/*
 .clearfix::after {
   content: "";
   display: table;
