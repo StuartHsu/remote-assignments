@@ -11,7 +11,7 @@
 body {
   font-family: 'Varela Round', sans-serif;
   line-height: 1.6;
-  color: #000;
+  background: #fff;
 }
 
 h2,
@@ -32,102 +32,70 @@ a {
 /* ---------- Navigation ---------- */
 
 .main-header {
-  background: gainsboro;
+  font-size: .7rem;
   padding-top: .5em;
   padding-bottom: .5em;
+  border-bottom: 1px solid #bdc1c6;
 }
 
-.webtitle {
-  font-size: 1.25rem;
-  margin: 0; /* 消除基本格式 */
+.webtitle img {
+  height: 23px;
 }
 
-.webtitle a,
-.main-nav a {
+.profile img {
+  height: 30px;
+}
+
+.webtitle,
+.main-nav a,
+.profile {  
   text-align: center;
-  padding: 10px 15px;
+  padding: 0px 1.5em;
 }
+
+.webtitle a {
+  margin-left: 8px;
+  font-size: 1em;
+  font-weight: 400;
+  letter-spacing: 0;
+}
+
+.main-nav {
+  font-size: 1.25em;
+}
+
+.profile a {
+  margin-right: 30px;
+  font-size: .7em;
+  font-weight: 400;
+  border: solid 1px grey;
+  padding: .3em 1em;
+}
+
+.webtitle h1,
+.profile h1 {
+  margin: 0;
+}
+
 
 /* ---------- toogle ---------- */
 
-#toggle {
-  display: none;
-}
 
-.togglearea {
-  border-color: gainsboro;
-  display: flex;
-  justify-content: flex-end;
-  padding: 10px 15px;
-}
-
-.togglearea label {
-  width: 45px;
-  height: 45px;
-  /* 滑鼠移到時有手指 */
-  cursor: pointer;
-  /* 讓 span 線條對準 */
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-}
-
-.togglearea label span {
-  background-color: black;
-  height: 2px;
-  width: 80%;
-  margin: 3px 0;
-}
-
-/* 一開始先不要顯現 */
-.togglearea {
-  display: none;
-}
 
 /* ---------- Layout Containers ---------- */
 
-.main-header {
-  padding-left: .5em;
-  padding-right: .5em;
-}
 
-.container {
-  text-align: center;
-  margin: 0 auto 100px;
-}
-
-.sectiontitle {
-  margin-bottom: 30px;
-}
-
-.box {
-  padding: 1em;
-  background: slategray;
-  margin: 0 .5em 1.5em;
-}
-
-.banner {
-  line-height: 6em;
-  height: 15em;
-  color: #000;
-  background: powderblue;
-  padding: 3.2em 0; /* 做出 Banner 高度 */
-  margin-bottom: 30px; /* 隔開與下面的距離 */
-  text-align: center;
-}
 
 /* ---- Page Elements ---- */
 
-.button {
-  display: inline-block;
-	color: #000;
-	text-align: center;
-	padding: .625em 1.25em;
-	background: skyblue;
-  margin-top: 30px;
-}
+
 
 /* ==============================
 ---------- Media Queries ----------
 ============================== */
+
+@media (min-width: 800px) {
+
+
+
+}
