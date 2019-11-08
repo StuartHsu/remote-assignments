@@ -12,6 +12,7 @@ body {
   font-family: 'Varela Round', sans-serif;
   line-height: 1.6;
   background: #fff;
+  padding-top: 48px; /* 置頂 nav 的高度 */
 }
 
 h1 {
@@ -36,10 +37,15 @@ a {
 /* ---------- Navigation ---------- */
 
 .main-header {
+  background: #fff;
   font-size: .7rem;
   padding-top: .5em;
   padding-bottom: .5em;
   border-bottom: 1px solid #bdc1c6;
+  /* 置頂設置 */
+  position: fixed;
+  width: 100%;
+  top: 0;
 }
 
 .webtitle img {
