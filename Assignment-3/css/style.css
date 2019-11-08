@@ -169,12 +169,6 @@ a {
   margin-bottom: 16px;
 }
 
-.action-button {
-  font-size: 0.9em;
-  padding-top: 16px;
-  margin: auto 0 -8px -8px;
-}
-
 .source {
   display: block;
   padding: 0 1.5em;
@@ -245,6 +239,21 @@ a {
   color: #1a73e8;
   line-height: 36px;
 }
+
+.action-button {
+  font-size: 0.9em;
+  padding-top: 16px;
+  margin: auto 0 -8px -8px;
+}
+
+.button:hover {
+  display: inline-block;
+  background: #e8f0fe;
+  height: 36px;
+  line-height: 36px;
+  border-radius: 4px;
+}
+
 
 .button-sub {
   color: #fff;
