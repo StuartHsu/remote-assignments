@@ -14,6 +14,10 @@ body {
   background: #fff;
 }
 
+h1 {
+  margin: 0;
+}
+
 h2,
 h3,
 a {
@@ -48,12 +52,13 @@ a {
 
 .webtitle,
 .main-nav a,
-.profile {  
+.profile {
   text-align: center;
   padding: 0px 1.5em;
 }
 
 .webtitle a {
+  color: grey;
   margin-left: 8px;
   font-size: 1em;
   font-weight: 400;
@@ -72,27 +77,202 @@ a {
   padding: .3em 1em;
 }
 
-.webtitle h1,
-.profile h1 {
-  margin: 0;
-}
-
-
 /* ---------- toogle ---------- */
 
 
 
+/* ---------- banner ---------- */
+
+.banner {
+  text-align: center;
+  box-shadow: 0 2px 5px -2.5px grey;
+}
+
+.banner-title {
+  padding: 40px 24px 20px;
+}
+
+.banner-title h1 {
+  font-size: 2.6em;
+  font-weight: 400;
+  margin: 14px 0;
+}
+
+.search {
+  height: 36px;
+  width: 100%;
+  padding: 8px 8px 8px 40px;
+  background: #f1f3f4;
+  border: 0;
+  border-radius: 2px;
+}
+
+.searchbox {
+  margin: 0 20em;
+  padding: 0 0 48px;
+}
+
 /* ---------- Layout Containers ---------- */
 
+.container-top {
+  background: #f1f3f4;
+  padding: 2em 3em 1em 3em;
+  margin: 0 auto;
+}
 
+.container-bottom {
+  padding: 2em 3em 1em 3em;
+  margin: 0 auto;
+  border-bottom: solid .5px #dadce0;
+}
+
+.sectiontitle {
+  margin: 0 0 32px;
+}
+
+.sectiontitle h1 {
+  font-weight: 400;
+}
+
+.box {
+  background: #fff;
+  border-radius: 8px;
+  border: 1px solid #dadce0;
+  margin-bottom: 30px;
+}
+
+.row img {
+  width: 100%;
+  border-top-right-radius: 8px;
+  border-top-left-radius: 8px;
+}
+
+.description {
+  padding: 16px;
+}
+
+.description h3 {
+  font-size: 1.5em;
+  color: #1a73e8;
+  font-weight: 400;
+  margin-bottom: 24px;
+}
+
+.description p {
+  font-size: 0.95em;
+  margin-bottom: 16px;
+}
+
+.action-button {
+  font-size: 0.9em;
+  padding-top: 16px;
+  margin: auto 0 -8px -8px;
+}
+
+.source {
+  display: block;
+  padding: 0 1.5em;
+}
+
+.sources {
+  border-bottom: solid .5px #dadce0;
+}
+
+.col {
+  margin: 24px 0;
+}
+
+.col h4 {
+  font-size: 1.05em;
+  font-weight: 300;
+  margin: 1px 0px 4px;
+}
+
+.sources-list li {
+  font-size: .85em;
+  font-weight: 300;
+  padding: 8px 0;
+}
+
+.top-footer,
+.buttom-footer {
+  padding: 0 1.5em;
+}
+
+.products {
+  font-size: .7em;
+  padding: 2em 0;
+  border-bottom: 1px solid #dadce0;
+}
+
+.product-list a {
+  font-size: 1.2em;
+  text-align: center;
+  padding: 0 1.5em;
+}
+
+.sources-list a:hover,
+.product-list a:hover,
+.info-list a:hover {
+  color: #1a73e8;
+}
+
+.info {
+  font-size: .9em;
+  padding: 2em 0;
+}
+
+.subscribe .profile {
+  font-size: 1.5em;
+  padding: 0;
+}
+
+.subscribe .profile a {
+  margin: 0;
+}
 
 /* ---- Page Elements ---- */
 
+.button {
+  background: 0;
+  padding: 0 8px;
+  color: #1a73e8;
+  line-height: 36px;
+}
 
+.button-sub {
+  color: #fff;
+  background: #1a73e8;
+  height: 36px;
+  line-height: 36px;
+  border-radius: 4px;
+  padding: 0 24px;
+  margin: 0 15px;
+}
+
+.tag {
+  color: #1a73e8;
+}
+
+.info-list span {
+  margin: 0 8px;
+}
 
 /* ==============================
 ---------- Media Queries ----------
 ============================== */
+
+@media (min-width: 801px) {
+
+  .box {
+    width: 49%;
+  }
+
+  .col {
+    width: 32%;
+  }
+
+}
 
 @media (min-width: 800px) {
 

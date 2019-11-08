@@ -7,13 +7,19 @@
   .main-header,
   .webtitle,
   .main-nav,
-  .profile {
+  .profile,
+  .row,
+  .sources,
+  .info,
+  .info-list,
+  .subscribe {
     display: flex;
     flex-direction: row;
     align-items: center;
   }
 
-  .main-header {
+  .main-header,
+  .sources {
     justify-content: space-between;
   }
 
@@ -21,5 +27,49 @@
     margin-right: auto;
     margin-left: 40px;
   }
+
+  .sectiontitle {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .row {
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: stretch;
+  }
+
+  .box,
+  .description {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .sources {
+    align-items: stretch;
+  }
+
+  .col {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: stretch;
+    align-items: flex-start;
+  }
+
+  .products,
+  .product-list {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+
+  .info {
+    align-items: center;
+    justify-content: space-between;
+  }
+
 
 }
