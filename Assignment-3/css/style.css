@@ -39,8 +39,7 @@ a {
 .main-header {
   background: #fff;
   font-size: .7rem;
-  padding-top: .5em;
-  padding-bottom: .5em;
+  height: 48px;
   border-bottom: 1px solid #bdc1c6;
   /* 置頂設置 */
   position: fixed;
@@ -76,16 +75,51 @@ a {
 }
 
 .profile a {
+  color: #3c4043;
   margin-right: 30px;
-  font-size: .7em;
-  font-weight: 400;
-  border: solid 1px grey;
-  padding: .3em 1em;
+  font-size: .65em;
+  font-weight: 500;
+  border: solid 1px #dadce0;
+  border-radius: 4px;
+  padding: .5em 1.5em;
 }
 
 /* ---------- toogle ---------- */
 
+#toggle {
+  display: none;
+}
 
+.togglearea {
+  border-color: gainsboro;
+  display: flex;
+  justify-content: flex-end;
+  padding: 10px 15px;
+}
+
+.togglearea label {
+  width: 45px;
+  height: 45px;
+  /* 滑鼠移到時有手指 */
+  cursor: pointer;
+  /* 讓 span 線條對準 */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.togglearea label span {
+  background-color: black;
+  height: 2px;
+  width: 80%;
+  margin: 3px 0;
+}
+
+/* 一開始先不要顯現 */
+.togglearea {
+  display: none;
+}
 
 /* ---------- banner ---------- */
 
@@ -292,5 +326,45 @@ a {
 @media (min-width: 800px) {
 
 
+
+}
+
+@media (max-width: 500px) {
+
+  .main-header .profile a {
+    display: none;
+  }
+
+  .main-header,
+  .profile {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+
+  .main-header {
+    padding: 0;
+  }
+
+  .webtitle {  
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+
+  .togglearea {
+    order: -1;
+  }
+
+  .togglearea label {
+    width: 2em;
+    height: 2em;
+  }
+
+  .togglearea label span {
+    height: 1px;
+    width: 80%;
+    margin: 2px 0;
+  }
 
 }

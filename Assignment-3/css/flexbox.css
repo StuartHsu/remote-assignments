@@ -71,5 +71,56 @@
     justify-content: space-between;
   }
 
+}
+
+
+@media (max-width: 800px) {
+
+  .main-header,
+  .togglearea {
+    display: flex;
+    flex-direction: row;
+  }
+
+  .main-header {
+    flex-wrap: wrap;
+    align-items: center;
+    /* justify-content: space-between; */
+  }
+
+  .webtitle {
+    order: 0;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 0;
+    margin-right: auto;
+  }
+
+  .main-header .profile {
+    order: 2;
+  }
+
+  .main-nav {
+    order: 3;
+    display: none;
+    width: 100%; /* 為了佔滿一整行 */
+  }
+
+  #toggle:checked + .main-nav {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .main-nav a:hover {
+    background: black;
+    color: white;
+  }
+
+  .togglearea {
+    margin-right: 8px;
+    display: flex;
+  }
+
 
 }
