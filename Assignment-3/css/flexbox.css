@@ -7,8 +7,7 @@
   .main-header,
   .webtitle,
   .main-nav,
-  .profile,
-  .row {
+  .profile {
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -23,24 +22,7 @@
     margin-left: 40px;
   }
 
-  .sectiontitle {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-  }
 
-  .row {
-    flex-wrap: wrap;
-    justify-content: space-between;
-    align-items: stretch;
-  }
-
-  .box,
-  .description {
-    display: flex;
-    flex-direction: column;
-  }
 
 
 }
@@ -134,6 +116,28 @@
 }
 
 @media (min-width: 601px) {
+
+  .row {
+    display: flex;
+    flex-direction: row;
+    /* align-items: center; */
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: stretch;
+  }
+
+  .sectiontitle {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .box,
+  .description {
+    display: flex;
+    flex-direction: column;
+  }
 
   .sources {
     display: flex;
