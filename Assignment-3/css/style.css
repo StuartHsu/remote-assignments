@@ -9,7 +9,7 @@
 }
 
 body {
-  font-family: 'Varela Round', sans-serif;
+  font-family: "Google Sans", "Noto Sans", "Noto Sans JP", "Noto Sans KR", "Noto Naskh Arabic", "Noto Sans Thai", "Noto Sans Hebrew", "Noto Sans Bengali", sans-serif;
   line-height: 1.6;
   background: #fff;
   padding-top: 48px; /* 置頂 nav 的高度 */
@@ -19,16 +19,88 @@ h1 {
   margin: 0;
 }
 
+h1,
 h2,
 h3,
-a {
-  color: #000;
+p,
+a,
+span {
+  color: #202124;
 }
 
 a {
   text-decoration: none; /* 消除基本格式 */
 }
 
+/* ==============================
+---------- Font ----------
+============================== */
+
+.main-header {
+  font-size: .7rem; /* 11.2px */
+}
+
+.webtitle a {
+  color: grey;
+  font-weight: 400;
+}
+
+.main-nav {
+  font-size: .875rem; /* 14px */
+}
+
+.main-nav a {
+  color: #5f6368;
+}
+
+.profile a {
+  color: #3c4043;
+  font-size: .875rem; /* 14px */
+  font-weight: 500;
+}
+
+.banner-title h1 {
+  font-size: 2.75rem;
+  font-weight: 400;
+  letter-spacing: -0.5px;
+}
+
+.sectiontitle h2 {
+  font-size: 2rem; /* 32px */
+  font-weight: 400;
+}
+
+.description h3 {
+  font-size: 1.5rem; /* 24px */
+  color: #1a73e8;
+  font-weight: 400;
+}
+
+.description p {
+  font-size: 1rem; /* 16px */
+}
+
+.col h3 {
+  font-size: 1rem; /* 16px */
+  font-weight: 300;
+}
+
+.col a,
+.product-list a,
+.info {
+  font-size: .875rem; /* 14px */
+  font-family: Roboto, "Noto Sans", "Noto Sans JP", "Noto Sans KR", "Noto Naskh Arabic", "Noto Sans Thai", "Noto Sans Hebrew", "Noto Sans Bengali", sans-serif;
+}
+
+.products {
+  font-size: .7rem; /* 11.2px */
+}
+
+.sources-list a:hover,
+.product-list a:hover,
+.info-list a:hover {
+  color: #1a73e8;
+}
 
 /* ==============================
 ---------- Base Layout ----------
@@ -38,7 +110,6 @@ a {
 
 .main-header {
   background: #fff;
-  font-size: .7rem;
   height: 48px;
   border-bottom: 1px solid #bdc1c6;
   /* 置頂設置 */
@@ -63,22 +134,11 @@ a {
 }
 
 .webtitle a {
-  color: grey;
   margin-left: 8px;
-  font-size: 1em;
-  font-weight: 400;
-  letter-spacing: 0;
-}
-
-.main-nav {
-  font-size: 1.25em;
 }
 
 .profile a {
-  color: #3c4043;
   margin-right: 30px;
-  font-size: .65em;
-  font-weight: 500;
   border: solid 1px #dadce0;
   border-radius: 4px;
   padding: .5em 1.5em;
@@ -133,8 +193,6 @@ a {
 }
 
 .banner-title h1 {
-  font-size: 2.6em;
-  font-weight: 400;
   margin: 14px 0;
 }
 
@@ -171,10 +229,6 @@ a {
   margin: 0 0 32px;
 }
 
-.sectiontitle h1 {
-  font-weight: 400;
-}
-
 .box {
   background: #fff;
   border-radius: 8px;
@@ -193,14 +247,10 @@ a {
 }
 
 .description h3 {
-  font-size: 1.5em;
-  color: #1a73e8;
-  font-weight: 400;
   margin-bottom: 24px;
 }
 
 .description p {
-  font-size: 0.95em;
   margin-bottom: 16px;
 }
 
@@ -218,14 +268,10 @@ a {
 }
 
 .col h4 {
-  font-size: 1.05em;
-  font-weight: 300;
   margin: 1px 0px 4px;
 }
 
 .sources-list li {
-  font-size: .85em;
-  font-weight: 300;
   padding: 8px 0;
 }
 
@@ -235,30 +281,20 @@ a {
 }
 
 .products {
-  font-size: .7em;
   padding: 2em 0;
   border-bottom: 1px solid #dadce0;
 }
 
 .product-list a {
-  font-size: 1.2em;
   text-align: center;
   padding: 0 1.5em;
 }
 
-.sources-list a:hover,
-.product-list a:hover,
-.info-list a:hover {
-  color: #1a73e8;
-}
-
 .info {
-  font-size: .9em;
-  padding: 2em 0;
+  padding: 24px 0;
 }
 
 .subscribe .profile {
-  font-size: 1.5em;
   padding: 0;
 }
 
@@ -317,18 +353,6 @@ a {
   .box {
     width: 49%;
   }
-
-  .col {
-    width: 32%;
-  }
-
-}
-
-@media (max-width: 800px) {
-
-
-
-
 
 }
 
@@ -401,10 +425,73 @@ a {
     padding: 1em;
   }
 
-  .products a {
-    display: block;
-    text-align: left;
-    padding: .5em 0;
+}
+
+
+
+
+
+
+@media (min-width: 841px) {
+
+  .products .webtitle {
+    margin: 0;
   }
 
 }
+
+@media (min-width: 601px) and (max-width: 840px) {
+
+  .products .webtitle {
+    padding: 0;
+  }
+
+}
+
+@media (min-width: 601px) {
+
+  .webtitle {
+    margin-bottom: 16px;
+  }
+
+  .col {
+    width: 33%;
+  }
+
+  .info-list {
+    margin-right: auto;
+  }
+
+  .profile {
+    margin-top: -10px;
+    padding: 0;
+  }
+
+  .profile a {
+    margin: 0;
+  }
+
+}
+
+@media (max-width: 600px) {
+
+  .product-list a {
+    text-align: left;
+    display: block;
+    padding: 8px 0;
+  }
+
+  .subscribe {
+    margin-top: 16px;
+  }
+
+  .info .profile {
+    padding: 0;
+  }
+
+}
+
+
+/* 1170 nav收,
+840 top-footer 單行/兩行
+600 Event(view all)雙/單直, source三直/單直, (條款隱私) 單行/三行 */
