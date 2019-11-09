@@ -88,6 +88,27 @@
     /* justify-content: space-between; */
   }
 
+  .main-nav {
+    order: 3;
+    display: none;
+    width: 100%; /* 為了佔滿一整行 */
+  }
+
+  #toggle:checked + .main-nav {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .main-nav a:hover {
+    background: #f1f3f4;
+    color: #000;
+  }
+
+  .togglearea {
+    margin-right: 8px;
+    display: flex;
+  }
+
   .webtitle {
     order: 0;
     display: flex;
@@ -101,26 +122,19 @@
     order: 2;
   }
 
-  .main-nav {
-    order: 3;
-    display: none;
-    width: 100%; /* 為了佔滿一整行 */
-  }
-
-  #toggle:checked + .main-nav {
+  .info,
+  .info-list,
+  .subscribe {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
+    align-items: center;
+    flex-wrap: wrap;
   }
 
-  .main-nav a:hover {
-    background: black;
-    color: white;
-  }
 
-  .togglearea {
-    margin-right: 8px;
-    display: flex;
+  .info {
+    align-items: center;
+    justify-content: space-between;
   }
-
 
 }

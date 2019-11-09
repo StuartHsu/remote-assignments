@@ -138,6 +138,12 @@ a {
   margin: 14px 0;
 }
 
+.searchbox {
+  margin: 0 auto;
+  max-width: 816px;
+  padding-bottom: 48px;
+}
+
 .search {
   height: 36px;
   width: 100%;
@@ -145,11 +151,6 @@ a {
   background: #f1f3f4;
   border: 0;
   border-radius: 2px;
-}
-
-.searchbox {
-  margin: 0 20em;
-  padding: 0 0 48px;
 }
 
 /* ---------- Layout Containers ---------- */
@@ -311,7 +312,7 @@ a {
 ---------- Media Queries ----------
 ============================== */
 
-@media (min-width: 801px) {
+@media (min-width: 850px) {
 
   .box {
     width: 49%;
@@ -323,9 +324,27 @@ a {
 
 }
 
-@media (min-width: 800px) {
+@media (max-width: 800px) {
 
 
+
+
+
+}
+
+@media (min-width: 501px) and (max-width: 850px) {
+
+  .main-nav a {
+    display: block;
+    background: #fff;
+    padding: 1em;
+  }
+
+  .searchbox {
+    max-width: 700px;
+    margin: 0 24px;
+    padding-bottom: 48px;
+  }
 
 }
 
@@ -346,7 +365,7 @@ a {
     padding: 0;
   }
 
-  .webtitle {  
+  .webtitle {
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -365,6 +384,27 @@ a {
     height: 1px;
     width: 80%;
     margin: 2px 0;
+  }
+
+  .banner-title h1 {
+    text-align: left;
+  }
+
+  .searchbox {
+    max-width: 816px;
+    margin: 0 24px;
+    padding-bottom: 48px;
+  }
+
+  .container-top,
+  .container-bottom {
+    padding: 1em;
+  }
+
+  .products a {
+    display: block;
+    text-align: left;
+    padding: .5em 0;
   }
 
 }
