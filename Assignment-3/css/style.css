@@ -200,6 +200,7 @@ a {
   margin: 0 auto;
   max-width: 816px;
   padding-bottom: 48px;
+  position: relative;
 }
 
 .search {
@@ -209,6 +210,14 @@ a {
   background: #f1f3f4;
   border: 0;
   border-radius: 2px;
+}
+
+.search-icon {
+  position: absolute;
+  left: 6px;
+  top: 4px;
+  width: 28px;
+  height: 28px;
 }
 
 /* ---------- Layout Containers ---------- */
@@ -354,12 +363,6 @@ a {
 ---------- Media Queries ----------
 ============================== */
 
-@media (min-width: 850px) {
-
-
-
-}
-
 @media (min-width: 501px) and (max-width: 850px) {
 
   .main-nav a {
@@ -368,11 +371,7 @@ a {
     padding: 1em;
   }
 
-  .searchbox {
-    max-width: 700px;
-    margin: 0 24px;
-    padding-bottom: 48px;
-  }
+
 
 }
 
@@ -414,19 +413,9 @@ a {
     margin: 2px 0;
   }
 
-  .banner-title h1 {
-    text-align: left;
-  }
-
-  .searchbox {
-    max-width: 816px;
-    margin: 0 24px;
-    padding-bottom: 48px;
-  }
-
-
-
 }
+
+
 
 
 
@@ -437,6 +426,17 @@ a {
 
   .products .webtitle {
     margin: 0;
+  }
+
+}
+
+
+@media (max-width: 840px) {
+
+  .searchbox {
+    max-width: 816px;
+    margin: 0 24px;
+    padding-bottom: 48px;
   }
 
 }
@@ -484,6 +484,10 @@ a {
 }
 
 @media (max-width: 600px) {
+
+  .banner-title h1 {
+    text-align: left;
+  }
 
   .container-top,
   .container-bottom {
