@@ -116,21 +116,21 @@ a {
   position: fixed;
   width: 100%;
   top: 0;
+  padding: 0 24px;
 }
 
 .webtitle img {
   height: 23px;
 }
 
-.profile img {
-  height: 30px;
+.profile-img img {
+  width: 30px;
+  margin-top: 6px;
 }
 
-.webtitle,
-.main-nav a,
-.profile {
+.main-nav a {
   text-align: center;
-  padding: 0px 1.5em;
+  padding: 0px 1.3em;
 }
 
 .webtitle a {
@@ -142,6 +142,10 @@ a {
   border: solid 1px #dadce0;
   border-radius: 4px;
   padding: .5em 1.5em;
+}
+
+.profile-img {
+  margin-left: 12px;
 }
 
 /* ---------- toogle ---------- */
@@ -363,39 +367,45 @@ a {
 ---------- Media Queries ----------
 ============================== */
 
-@media (min-width: 501px) and (max-width: 850px) {
+@media (min-width: 841px) {
 
-  .main-nav a {
-    display: block;
-    background: #fff;
-    padding: 1em;
+  .main-header .webtitle {
+    margin-right: 10px;
   }
 
-
+  .main-nav {
+    margin-right: auto;
+  }
 
 }
 
-@media (max-width: 500px) {
 
-  .main-header .profile a {
-    display: none;
-  }
-
-  .main-header,
-  .profile {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-  }
+@media (max-width: 840px) {
 
   .main-header {
-    padding: 0;
+    padding: 0 16px;
   }
 
-  .webtitle {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
+  .main-nav {
+    margin-top: 5px;
+    background: #fff;
+    display: none;
+    width: 100%; /* 為了佔滿一整行 */
+  }
+
+  .main-nav a {
+    display: block;
+    padding: 1em;
+    text-align: left;
+  }
+
+  .main-nav a:hover {
+    background: #f1f3f4;
+    color: #000;
+  }
+
+  .profile-lang {
+    display: none;
   }
 
   .togglearea {
@@ -413,35 +423,20 @@ a {
     margin: 2px 0;
   }
 
-}
-
-
-
-
-
-
-
-
-@media (min-width: 841px) {
-
-  .products .webtitle {
-    margin: 0;
-  }
-
-}
-
-
-@media (max-width: 840px) {
-
   .searchbox {
     max-width: 816px;
     margin: 0 24px;
     padding-bottom: 48px;
+    z-index: -1;
   }
 
 }
 
 @media (min-width: 601px) and (max-width: 840px) {
+
+  .profile-img img {
+    margin-top: 8px;
+  }
 
   .container-top,
   .container-bottom {
@@ -449,16 +444,18 @@ a {
   }
 
   .products .webtitle {
+    margin-bottom: 16px;
     padding: 0;
+  }
+
+  .product-list a {
+    margin-right: 40px;
+    padding: 8px 0;
   }
 
 }
 
 @media (min-width: 601px) {
-
-  .webtitle {
-    margin-bottom: 16px;
-  }
 
   .box {
     width: 48%;
@@ -484,6 +481,10 @@ a {
 }
 
 @media (max-width: 600px) {
+
+  .profile-img img {
+    margin-top: -3px;
+  }
 
   .banner-title h1 {
     text-align: left;
@@ -522,7 +523,10 @@ a {
 
 }
 
+@media (min-width: 501px) {
 
-/* 1170 nav收,
-840 top-footer 單行/兩行
-600 Event(view all)雙/單直, source三直/單直, (條款隱私) 單行/三行 */
+  .togglearea {
+    margin-left: -15px;
+  }
+
+}
