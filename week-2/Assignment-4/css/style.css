@@ -1,0 +1,221 @@
+/* ==============================
+---------- Base Style ----------
+============================== */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Varela Round', sans-serif;
+  line-height: 1.6;
+  color: #000;
+}
+
+h2,
+h3,
+a {
+  color: #000;
+}
+
+a {
+  text-decoration: none; /* 消除基本格式 */
+}
+
+
+/* ==============================
+---------- Base Layout ----------
+============================== */
+
+/* ---------- Navigation ---------- */
+
+.main-header {
+  background: gainsboro;
+  padding-top: .5em;
+  padding-bottom: .5em;
+}
+
+.webtitle {
+  font-size: 1.25rem;
+  margin: 0; /* 消除基本格式 */
+}
+
+.webtitle a,
+.main-nav a {
+  text-align: center;
+  padding: 10px 15px;
+}
+
+/* ---------- toogle ---------- */
+
+#toggle {
+  display: none;
+}
+
+.togglearea {
+  border-color: gainsboro;
+  display: flex;
+  justify-content: flex-end;
+  padding: 10px 15px;
+}
+
+.togglearea label {
+  width: 45px;
+  height: 45px;
+  /* 滑鼠移到時有手指 */
+  cursor: pointer;
+  /* 讓 span 線條對準 */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.togglearea label span {
+  background-color: black;
+  height: 2px;
+  width: 80%;
+  margin: 3px 0;
+}
+
+/* 一開始先不要顯現 */
+.togglearea {
+  display: none;
+}
+
+/* ---------- Layout Containers ---------- */
+
+.main-header {
+  padding-left: .5em;
+  padding-right: .5em;
+}
+
+.container {
+  text-align: center;
+  margin: 0 auto 100px;
+}
+
+.sectiontitle {
+  margin-bottom: 30px;
+}
+
+.box {
+  padding: 1em;
+  background: slategray;
+  margin: 0 .5em 1.5em;
+}
+
+.banner {
+  line-height: 6em;
+  height: 15em;
+  color: #000;
+  background: powderblue;
+  padding: 3.2em 0; /* 做出 Banner 高度 */
+  margin-bottom: 30px; /* 隔開與下面的距離 */
+  text-align: center;
+}
+
+/* ---- Page Elements ---- */
+
+.button {
+  display: inline-block;
+	color: #000;
+	text-align: center;
+	padding: .625em 1.25em;
+	background: skyblue;
+  margin-top: 30px;
+}
+
+/* ==============================
+---------- Media Queries ----------
+============================== */
+
+/* 500px~800px */
+
+@media (min-width: 801px) {
+
+  .container {
+    max-width: 1200px;    
+  }
+
+  .row {
+    width: 90%;
+    margin: 0 auto;
+  }
+
+  .box {
+    width: 45%;
+    height: 10em;
+  }
+
+}
+
+@media (max-width: 800px) {
+
+  .main-nav a {
+    display: block;
+  }
+
+  .row {
+    width: 90%;
+    margin: 0 auto;
+  }
+
+  .box {
+    width: 45%;
+    height: 10em;
+  }
+
+}
+
+@media (max-width: 500px) {
+
+  .webtitle {
+    font-size: .8em;
+  }
+
+  h1 {
+    font-size: 1.5em;
+  }
+
+  h2 {
+    font-size: 1.3em;
+  }
+
+  p {
+    font-size: .9em;
+  }
+
+  .main-header {
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+
+  .togglearea label {
+    width: 1.5em;
+    height: 1.5em;
+  }
+
+  .togglearea label span {
+    height: 1px;
+    width: 80%;
+    margin: 2px 0;
+  }
+
+  .box {
+    width: 100%;
+  }
+
+}
+
+
+
+
+/*
+.clearfix::after {
+  content: "";
+  display: table;
+  clear: both;
+} */
