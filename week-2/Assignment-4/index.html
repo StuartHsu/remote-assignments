@@ -12,17 +12,9 @@
 <body>
   <header class="main-header">
     <h1 class="webtitle"><a href="#">Website Title / Logo</a></h1>
-    <!-- <div class="togglearea">
-      <label for="toggle">
-        <span></span>
-        <span></span>
-        <span></span>
-      </label>
-    </div> -->
-    <!-- <input type="checkbox" id="toggle"> -->
     <ul class="main-nav" id="nav">
       <div class="close-box">
-        <li><a href="javascript:void(0)" id="close" class="close" onclick="closeNav()">&times;</a></li>
+        <li><a href="javascript:void(0)" class="close">&times;</a></li>
       </div>
       <div class="list">
         <li><a href="#">Item 1</a></li>
@@ -32,7 +24,7 @@
       </div>
 
     </ul>
-    <span id="open" class="open" onclick="openNav()">&#9776;</span>
+    <span class="open" >&#9776;</span>
 
   </header>
 
@@ -70,20 +62,7 @@
     </div> <!-- container End -->
   </div> <!-- content End -->
 
-  <!-- <script src="app.js"></script> -->
+  <script src="app.js"></script>
 
-  <script type="text/javascript">
-
-    function openNav() {
-      document.getElementById('open').style.display = "none";
-      document.getElementById('nav').style.width = "50%";
-    }
-
-    function closeNav() {
-      document.getElementById('nav').style.width = "";
-      document.getElementById('open').style.display = "block";
-    }
-
-  </script>
 </body>
 </html>

@@ -48,44 +48,10 @@ a {
   padding: 10px 15px; /* 10px, 15px */
 }
 
-/* .main-nav a {
+.list a {
   text-align: center;
   padding: 10px 15px;
-} */
-/* ---------- toogle ---------- */
-
-/* #toggle {
-  display: none;
 }
-
-.togglearea {
-  border-color: gainsboro;
-  display: flex;
-  justify-content: flex-end;
-  padding: 5px 10px;
-}
-
-.togglearea label {
-  width: 30px;
-  height: 30px;
-  cursor: pointer;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-}
-
-.togglearea label span {
-  background-color: black;
-  height: 2px;
-  width: 80%;
-  margin: 3px 0;
-}
-
-.togglearea {
-  display: none;
-} */
-
 
 .open {
   display: none;
@@ -146,6 +112,10 @@ a {
 
 @media (min-width: 801px) {
 
+  .close-box {
+    display: none;
+  }
+
   .container {
     max-width: 1200px;
   }
@@ -171,26 +141,26 @@ a {
   .main-nav {
     width: 0%;
     height: 100vh;
-    overflow-x: hidden;
-    z-index: 1;
+    max-width: 320px;
+    background: #fff;
+    border-left: 1px solid gainsboro;
     position: fixed;
     right: 0;
     top: 0;
-    background: #fff;
-    border-left: 1px solid gainsboro;
   }
 
   .main-nav a {
-    color: #000;
     font-size: 16px;
+    color: #000;
+    padding: 10px 15px;
     text-decoration: none;
     display: block;
-    padding: 10px 15px;
     transition: 0.4s;
   }
 
-  .main-nav a:hover {
-    color: gainsboro;
+  .main-nav a:hover,
+  .open:hover {
+    color: grey;
   }
 
   .close-box,
@@ -201,7 +171,7 @@ a {
   .close {
     height: 60px;
     margin-right: 15px;
-    margin-bottom: 5px;
+    /* margin-bottom: 10px; */
   }
 
   .row {
@@ -237,17 +207,6 @@ a {
   .main-header {
     padding-top: 0;
     padding-bottom: 0;
-  }
-
-  .togglearea label {
-    width: 1.5em;
-    height: 1.5em;
-  }
-
-  .togglearea label span {
-    height: 1px;
-    width: 80%;
-    margin: 2px 0;
   }
 
   .box {
