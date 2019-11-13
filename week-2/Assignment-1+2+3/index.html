@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Assignment-1,2,3</title>
+</head>
+
+<body>
+
+<h2>Assignment 1: Function and Array</h2>
+
+  <pre/>
+    <code class="language-javascript">
+      function max(...numbers){
+        var max;
+        max = numbers[0]; // 先把第一個當最大值
+
+        for (var i = 0; i < numbers.length; i++) {
+          if (numbers[i] > max) {
+            // 若數字大於原本的 max，則將新的數字作為 max
+            max = numbers[i];
+          }
+        }
+        console.log(max);
+      }
+    </code>
+  </pre>
+
+  <hr>
+
+  <h2>Assignment 2: Object</h2>
+
+    <pre/>
+      <code class="language-javascript">
+        function calculate(args) {
+          let result;
+          if (args.op === "+") {
+            result = args.n1 + args.n2;
+          } else if (args.op === "-") {
+            result = args.n1 - args.n2;
+          } else {
+            result = "Not supported";
+          }
+          return result;
+        }
+
+        // First way
+        calculate({op: '+', n1: 2, n2: 3});
+
+        // Second way
+        class Args {
+          constructor(op, n1, n2) {
+            this.op = op,
+            this.n1 = n1,
+            this.n2 = n2
+          }
+        }
+
+        const test = new Args('+', 2, 3);
+        calculate(test);
+
+      </code>
+    </pre>
+
+    <hr>
+
+    <h2>Assignment 3: Function, Array, and Object</h2>
+
+      <pre/>
+        <code class="language-javascript">
+          function avg(data) {
+
+            for (var i = 0; i < data.products.length; i++) {
+              var avgPrice = data.products[i].price / data.size;
+              var name = data.products[i].name;
+              console.log(name + ': ' + avgPrice);
+            }
+
+          }
+
+          avg({
+            size: 3,
+            products: [{
+                name: "Product 1",
+                price: 100
+              },
+              {
+                name: "Product 2",
+                price: 700
+              },
+              {
+                name: "Product 3",
+                price: 250
+              }
+            ]
+          });
+        </code>
+      </pre>
+
+</body>
+</html>
