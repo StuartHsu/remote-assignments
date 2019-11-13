@@ -61,26 +61,15 @@ a {
   cursor: pointer;
 }
 
+.close {
+  cursor: pointer;
+}
+
 /* ---------- Layout Containers ---------- */
 
 .main-header {
   padding-left: .5em;
   padding-right: .5em;
-}
-
-.container {
-  text-align: center;
-  margin: 0 auto 100px;
-}
-
-.sectiontitle {
-  margin-bottom: 30px;
-}
-
-.box {
-  padding: 1em;
-  background: slategray;
-  margin: 0 .5em 1.5em;
 }
 
 .banner {
@@ -93,6 +82,25 @@ a {
   text-align: center;
 }
 
+.container {
+  text-align: center;
+  margin: 0 auto 56px;
+}
+
+.sectiontitle {
+  margin-bottom: 30px;
+}
+
+.box {
+  padding: 1em;
+  background: slategray;
+  margin: 0 .5em 1.5em;
+}
+
+.second {
+  display: none;
+}
+
 /* ---- Page Elements ---- */
 
 .button {
@@ -102,13 +110,13 @@ a {
 	padding: .625rem 1.25rem;
 	background: skyblue;
   margin-top: 30px;
+  cursor: pointer;
 }
+
 
 /* ==============================
 ---------- Media Queries ----------
 ============================== */
-
-/* 500px~800px */
 
 @media (min-width: 801px) {
 
