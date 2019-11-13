@@ -32,6 +32,7 @@ a {
 /* ---------- Navigation ---------- */
 
 .main-header {
+  height: 60px;
   background: gainsboro;
   padding-top: .5em;
   padding-bottom: .5em;
@@ -42,15 +43,18 @@ a {
   margin: 0; /* 消除基本格式 */
 }
 
-.webtitle a,
-.main-nav a {
+.webtitle a {
   text-align: center;
-  padding: 10px 15px;
+  padding: 10px 15px; /* 10px, 15px */
 }
 
+/* .main-nav a {
+  text-align: center;
+  padding: 10px 15px;
+} */
 /* ---------- toogle ---------- */
 
-#toggle {
+/* #toggle {
   display: none;
 }
 
@@ -58,15 +62,13 @@ a {
   border-color: gainsboro;
   display: flex;
   justify-content: flex-end;
-  padding: 10px 15px;
+  padding: 5px 10px;
 }
 
 .togglearea label {
-  width: 45px;
-  height: 45px;
-  /* 滑鼠移到時有手指 */
+  width: 30px;
+  height: 30px;
   cursor: pointer;
-  /* 讓 span 線條對準 */
   display: flex;
   justify-content: center;
   align-items: center;
@@ -80,9 +82,17 @@ a {
   margin: 3px 0;
 }
 
-/* 一開始先不要顯現 */
 .togglearea {
   display: none;
+} */
+
+
+.open {
+  display: none;
+  color: #000;
+  font-size: 24px;
+  margin-right: 15px;
+  cursor: pointer;
 }
 
 /* ---------- Layout Containers ---------- */
@@ -112,7 +122,7 @@ a {
   height: 15em;
   color: #000;
   background: powderblue;
-  padding: 3.2em 0; /* 做出 Banner 高度 */
+  padding: 3.2rem 0; /* 做出 Banner 高度 */
   margin-bottom: 30px; /* 隔開與下面的距離 */
   text-align: center;
 }
@@ -123,7 +133,7 @@ a {
   display: inline-block;
 	color: #000;
 	text-align: center;
-	padding: .625em 1.25em;
+	padding: .625rem 1.25rem;
 	background: skyblue;
   margin-top: 30px;
 }
@@ -137,7 +147,7 @@ a {
 @media (min-width: 801px) {
 
   .container {
-    max-width: 1200px;    
+    max-width: 1200px;
   }
 
   .row {
@@ -147,15 +157,51 @@ a {
 
   .box {
     width: 45%;
-    height: 10em;
+    height: 10rem;
   }
 
 }
 
 @media (max-width: 800px) {
 
-  .main-nav a {
+  .open {
     display: block;
+  }
+
+  .main-nav {
+    width: 0%;
+    height: 100vh;
+    overflow-x: hidden;
+    z-index: 1;
+    position: fixed;
+    right: 0;
+    top: 0;
+    background: #fff;
+    border-left: 1px solid gainsboro;
+  }
+
+  .main-nav a {
+    color: #000;
+    font-size: 16px;
+    text-decoration: none;
+    display: block;
+    padding: 10px 15px;
+    transition: 0.4s;
+  }
+
+  .main-nav a:hover {
+    color: gainsboro;
+  }
+
+  .close-box,
+  .list {
+    margin-top: 10px;
+  }
+
+  .close {
+    height: 60px;
+    margin-right: 15px;
+    margin-bottom: 5px;
   }
 
   .row {
@@ -165,7 +211,7 @@ a {
 
   .box {
     width: 45%;
-    height: 10em;
+    height: 10rem;
   }
 
 }
@@ -173,19 +219,19 @@ a {
 @media (max-width: 500px) {
 
   .webtitle {
-    font-size: .8em;
+    font-size: 1rem;
   }
 
   h1 {
-    font-size: 1.5em;
+    font-size: 2rem;
   }
 
   h2 {
-    font-size: 1.3em;
+    font-size: 1.4rem;
   }
 
   p {
-    font-size: .9em;
+    font-size: .9rem;
   }
 
   .main-header {
@@ -209,13 +255,3 @@ a {
   }
 
 }
-
-
-
-
-/*
-.clearfix::after {
-  content: "";
-  display: table;
-  clear: both;
-} */
