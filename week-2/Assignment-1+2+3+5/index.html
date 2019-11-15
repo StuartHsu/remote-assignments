@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Assignment-1,2,3</title>
+</head>
+
+<body>
+
+<h2>Assignment 1: Function and Array</h2>
+
+  <pre/>
+    <code class="language-javascript">
+      function max(...numbers){
+        var max;
+        max = numbers[0]; // 先把第一個當最大值
+
+        for (var i = 0; i < numbers.length; i++) {
+          if (numbers[i] > max) {
+            // 若數字大於原本的 max，則將新的數字作為 max
+            max = numbers[i];
+          }
+        }
+        console.log(max);
+      }
+    </code>
+  </pre>
+
+<hr>
+
+<h2>Assignment 2: Object</h2>
+
+  <pre/>
+    <code class="language-javascript">
+      function calculate(args) {
+        let result;
+        if (args.op === "+") {
+          result = args.n1 + args.n2;
+        } else if (args.op === "-") {
+          result = args.n1 - args.n2;
+        } else {
+          result = "Not supported";
+        }
+        return result;
+      }
+
+      // First way
+      calculate({op: '+', n1: 2, n2: 3});
+
+      // Second way
+      class Args {
+        constructor(op, n1, n2) {
+          this.op = op,
+          this.n1 = n1,
+          this.n2 = n2
+        }
+      }
+
+      const test = new Args('+', 2, 3);
+      calculate(test);
+
+    </code>
+  </pre>
+
+<hr>
+
+<h2>Assignment 3: Function, Array, and Object</h2>
+
+  <pre/>
+    <code class="language-javascript">
+      function avg(data) {
+
+        var sum = 0;
+        for (var i = 0; i < data.products.length; i++) {
+          sum += data.products[i].price;
+        }
+        var avgPrice = sum / data.size;
+        console.log(avgPrice);
+
+      }
+
+      avg({
+        size: 3,
+        products: [{
+            name: "Product 1",
+            price: 100
+          },
+          {
+            name: "Product 2",
+            price: 700
+          },
+          {
+            name: "Product 3",
+            price: 250
+          }
+        ]
+      });
+    </code>
+  </pre>
+
+<hr>
+
+<h2>Assignment 5: Algorithm Practice (Advanced Optional)</h2>
+
+  <pre/>
+    <code class="language-javascript">
+      function twoSum(nums, target){
+        var indices;
+        for (var i = 0; i < nums.length; i++) {
+          for (var j = i + 1; j < nums.length; j++) {
+            if (nums[i] + nums[j] === target && !indices) {
+              indices = [i, j];
+            }
+          }
+        }
+        if (indices) {
+          console.log(indices);
+        } else {
+          console.log("There is no match result, please change your input.");
+        }
+      }
+
+      twoSum([2, 7, 11, 15], 9);
+    </code>
+  </pre>
+
+</body>
+</html>
