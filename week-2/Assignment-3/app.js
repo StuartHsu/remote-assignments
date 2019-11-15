@@ -1,11 +1,12 @@
 function avg(data) {
 
+  var sum = 0;
   for (var i = 0; i < data.products.length; i++) {
-    var avgPrice = data.products[i].price / data.size;
-    var name = data.products[i].name;
-    console.log(name + ': ' + avgPrice);    
+    sum += data.products[i].price;
   }
-
+  var avgPrice = sum / data.size;
+  console.log(avgPrice);
+  
 }
 
 avg({
