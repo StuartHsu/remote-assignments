@@ -41,6 +41,10 @@ p {
   display: inline-block;
 }
 
+input {
+  margin-left: 10px;
+}
+
 .button {
   font-family: "Varela Round", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 1em;
@@ -48,6 +52,7 @@ p {
   color: white;
   background: #384047;
   display: inline-block;
+  margin-left: 10px;
   padding: 4px 15px;
   border: 1px solid #384047;
   border-radius: 5px;

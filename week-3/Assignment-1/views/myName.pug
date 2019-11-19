@@ -1,0 +1,10 @@
+extends layout
+
+block content  
+  if name
+    h2 Yooooo #{name}!
+  else
+    form(action='/myName', method='post')
+      p Please enter your name:
+        input(type='text', name='username')
+      button.button(type='submit') Submit!

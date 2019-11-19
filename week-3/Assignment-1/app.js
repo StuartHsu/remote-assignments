@@ -1,8 +1,14 @@
 const express = require('express');
+const bodyParser = require('body-parser');
+const cookieParser = require('cookie-parser');
 
 const app = express();
 
 app.use(express.static('public')); // static file
+app.use(bodyParser.urlencoded({extended: false}));
+app.use(cookieParser()); // cookie
+
+app.set('view engine', 'pug');
 
 // Assignment-1: Your First Web Server
 app.get('/', (req, res) => {
@@ -35,6 +41,22 @@ app.get('/sum.html', (req, res) => {
 });
 // Assignment-3: End
 
+
+// Assignment-4: HTTP Cookie (Backend Required, Front-End Optional)
+app.get('/myName', (req, res) => {
+  res.render('myName', { name: req.cookies.username }); // 在 get 時，檢查 cookie 是否已存有名字，並渲染之
+});
+
+app.post('/myName', (req, res) => {
+  res.cookie('username', req.body.username); // 當按下送出後，會將 form 的內容以 cookie 傳給瀏覽器
+  var userInput = req.body.username; // 將使用者名字存入變數
+  res.redirect(`/trackName?name=${userInput}`); // 導到 trackName?name= 這個格式的網頁
+});
+
+app.get('/trackName', (req, res) => {
+  res.redirect('/myName'); // 然後又導回來...嗯??
+});
+// Assignment-4: End
 
 app.listen(3000, () => {
   console.log('Server started on port 3000');
