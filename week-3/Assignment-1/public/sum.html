@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+      <title>Week-3 Assignment</title>
+      <link rel="stylesheet" href="stylesheets/style.css">
+      <script>
+        // 1. Create an XMLHTTP Request object
+        var request = new XMLHttpRequest();
+        // 2. Create a callback function
+        request.onreadystatechange = function () {
+          if (request.readyState === 4) {
+            var val = document.getElementById('number').value;
+            window.location.href = "/getData?number=" + val;
+          }
+        }
+        // 3. Open a request
+        request.open('GET', '/');
+        // 4. Send the request
+        function sendAJAX() {
+          request.send();
+        }
+      </script>
+  </head>
+
+  <body>
+    <div class="container">
+      <div class="heading">
+        <h1>Assignment-3</h1>
+        <h2>這是一個計算機喔喔喔喔</h2>
+        <form>
+            <p>請輸入一正整數</p>
+            <input type="text" id="number">
+            <input type="submit" value="送出！" class="button" onclick="sendAJAX()">
+        </form>
+      </div>
+    </div>
+  </body>
+
+</html>
