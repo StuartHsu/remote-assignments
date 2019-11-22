@@ -35,17 +35,6 @@ app.get('/getData', (req, res) => {
 // Assignment-2: End
 
 
-// Assignment-3: Connect to Backend API by AJAX
-// app.get('/sum.html', (req, res) => {
-//   res.redirect('/sum');
-// });
-// Assignment-3: End
-
-app.get('/sum2.html', (req, res) => {
-  res.sendFile(__dirname + "/sum2.html");
-});
-
-
 // Assignment-4: HTTP Cookie (Backend Required, Front-End Optional)
 app.get('/myName', (req, res) => {
   res.render('myName', { name: req.cookies.username }); // 在 get 時，檢查 cookie 是否已存有名字，並渲染之
