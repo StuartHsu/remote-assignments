@@ -5,20 +5,27 @@
       <title>Week-3 Assignment</title>
       <link rel="stylesheet" href="stylesheets/style.css">
       <script>
-        // 1. Create an XMLHTTP Request object
-        var request = new XMLHttpRequest();
-        // 2. Create a callback function
-        request.onreadystatechange = function () {
-          if (request.readyState === 4) {
-            var val = document.getElementById('number').value;
-            window.location.href = "/getData?number=" + val;
-          }
-        }
-        // 3. Open a request
-        request.open('GET', '/');
-        // 4. Send the request
         function sendAJAX() {
-          request.send();
+          var val = document.getElementById('number').value;
+
+          // 建立 Ajax 物件
+          var xhr = new XMLHttpRequest();
+
+          // 建立 readyState 變化的處理函數
+          xhr.onreadystatechange = function () {
+            if (xhr.readyState === 4) {
+              document.getElementById('ajax').innerHTML = xhr.responseText;
+            }
+          };
+
+          // 定義網址
+          var url = 'getData?number=' + val;
+          //發送請求
+          xhr.open('GET', url, true);
+          xhr.send();
+
+          // 隱藏按鈕
+          document.getElementById("load").style.display = "none";
         }
       </script>
   </head>
@@ -28,11 +35,14 @@
       <div class="heading">
         <h1>Assignment-3</h1>
         <h2>這是一個計算機喔喔喔喔</h2>
-        <form>
+        <form id="load" method="POST">
             <p>請輸入一正整數</p>
             <input type="text" id="number">
-            <input type="submit" value="送出！" class="button" onclick="sendAJAX()">
+            <input type="button" value="送出！" class="button" onclick="sendAJAX()">
         </form>
+        <div id="ajax">
+
+        </div>
       </div>
     </div>
   </body>

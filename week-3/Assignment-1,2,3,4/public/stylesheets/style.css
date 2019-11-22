@@ -67,3 +67,8 @@ input {
   border-color: #8d9aa5;
   box-shadow: 0 2px 0 0 #8d9aa5;
 }
+
+#ajax h1 {
+  font-size: 1.5rem;
+  color: DodgerBlue;
+}
