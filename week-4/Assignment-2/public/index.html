@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+      <title>Week-4 Assignment-2</title>
+      <link rel="stylesheet" href="stylesheets/style.css">
+      <script>
+
+        function ajax(src, callback){
+          var xhr = new XMLHttpRequest();
+          xhr.onreadystatechange = function () {
+            if (xhr.readyState === 4) {
+              var userInfo = JSON.parse(xhr.responseText);
+              callback(userInfo);
+            }
+          };
+          xhr.open('GET', src);
+          xhr.send();
+        }
+
+        function render(data){
+          var content = "";
+          for (var i = 0; i < data.length; i++) {
+            content += `<div class="content">
+              Name: ${data[i].name} <br />
+              Price: ${data[i].price} <br />
+              Description: ${data[i].description}</div>`;
+
+            document.getElementById('ajax').innerHTML = content;
+          }
+        }
+
+        ajax("https://cwpeng.github.io/live-records-samples/data/products.json", function(response){render(response);});
+
+      </script>
+  </head>
+
+  <body>
+    <div class="container">
+      <div class="heading">
+        <h1>Week-4 Assignment-2</h1>
+        <p>Callback Function and Advanced HTML DOM</p>
+        <h2>來看看澎澎老師給的網址裡有什麼東西</h2>
+        <div id="ajax">
+
+        </div>
+      </div>
+    </div>
+  </body>
+
+</html>
