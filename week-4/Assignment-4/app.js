@@ -7,22 +7,6 @@ const app = express();
 app.use(bodyParser.urlencoded({extended: false}));
 app.use(express.static('public')); // static file
 
-// 1. Create connect
-// const db = mysql.createConnection({
-//   host     : 'localhost',
-//   user     : 'root',
-//   password : 'katosy0322',
-//   database : 'assignment' // 這要等第三步 DB 建起來再加上來
-// });
-
-// 2. Connect
-// db.connect((err) => {
-//   if(err) {
-//     throw err;
-//   }
-//   console.log('MySql Connected...');
-// });
-
 // 3. Create DB
 // app.get('/createdb', (req, res) => {
 //   let sql = 'CREATE DATABASE assignment';
