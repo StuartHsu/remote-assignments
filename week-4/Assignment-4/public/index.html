@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+      <title>Week-4 Assignment-2</title>
+      <link rel="stylesheet" href="stylesheets/style.css">
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  </head>
+
+  <body>
+    <div class="container">
+      <div class="heading">
+        <h1>Week-4 Assignment-4</h1>
+        <p>Build a Website with MySQL</p>
+        <h2>你登入一下r</h2>
+        <div class="hint">
+          <p id="nodata"></p>
+        </div>
+        <div class="login">
+          <div class="form">
+            <div class="form-group">
+              <labe for="email">Email:</labe>
+              <input type="email" class="form-control" name="email" id="email">
+            </div>
+            <div class="form-group">
+              <labe for="password">Password:</labe>
+              <input type="password" class="form-control" name="password" id="password">
+            </div>
+              <button class="button" id="register">註冊</button>
+              <button class="button" id="login">登入</button>
+          </div>
+        </div>
+
+        <script type="text/javascript">
+          // 註冊按鈕
+          $("#register").click(function() {
+            $.ajax({
+              url: "/register",
+              type: "GET",
+              data: {
+                usermail: $("#email").val(),
+                password: $("#password").val()
+              },
+              success: function(data) {
+                if (data === "重複") {
+                  document.getElementById("nodata").innerHTML = "此信箱已被註冊";
+                  document.getElementById("nodata").style.display = "block";
+                } else if (data === "註冊成功") {
+                  window.location.href="/member";
+                }
+              },
+              error: function() {
+                alert("Sorry...Something Wrong!");
+              }
+            });
+          });
+
+          // 登入按鈕
+          $("#login").click(function() {
+            $.ajax({
+              url: "/login",
+              type: "GET",
+              data: {
+                usermail: $("#email").val(),
+                password: $("#password").val()
+              },
+              success: function(data) {
+                if (data === "未註冊") {
+                  document.getElementById("nodata").innerHTML = "此信箱尚未註冊";
+                  document.getElementById("nodata").style.display = "block";
+                } else if (data === "認證成功") {
+                  window.location.href="/member";
+                } else if (data === "認證失敗") {
+                  document.getElementById("nodata").innerHTML = "密碼輸入錯誤，請重新確認密碼";
+                  document.getElementById("nodata").style.display = "block";
+                }
+              },
+              error: function() {
+                alert("Sorry...Something Wrong!");
+              }
+            });
+          });
+        </script>
+
+      </div>
+    </div>
+  </body>
+
+</html>
