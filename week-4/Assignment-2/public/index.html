@@ -19,14 +19,26 @@
         }
 
         function render(data){
-          var content = "";
+          // var content = "";
+          var contents = document.getElementById("ajax");
           for (var i = 0; i < data.length; i++) {
-            content += `<div class="content">
-              Name: ${data[i].name} <br />
-              Price: ${data[i].price} <br />
-              Description: ${data[i].description}</div>`;
 
-            document.getElementById('ajax').innerHTML = content;
+            var partDiv = document.createElement("div");
+            partDiv.className = "part";
+
+            var name = document.createElement("h3");
+            var price = document.createElement("p");
+            var description = document.createElement("p");
+
+            name.innerHTML = `Name: ${data[i].name}`;
+            price.innerHTML = `$ ${data[i].price}`;
+            description.innerHTML = `${data[i].description}`;
+
+            partDiv.appendChild(name);
+            partDiv.appendChild(price);
+            partDiv.appendChild(description);
+
+            contents.appendChild(partDiv);
           }
         }
 

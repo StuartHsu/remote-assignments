@@ -38,7 +38,7 @@ h2 {
 p {
   color: #8d9aa5;
   font-size: 1em;
-  display: inline-block;
+  padding: 5px 0;
 }
 
 input {
@@ -80,7 +80,7 @@ input {
   flex-wrap: wrap;
 }
 
-.content {
+.part {
   margin-top: 20px;
   padding: 10px;
   width: 30%;
